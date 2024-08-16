@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+<h2>User currently logged in: {{ username }}</h2>
+<h2>UTC time now: {{ time }}</h2>
+{% if info %}
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Number of shares</th>
+                <th>Current price</th>
+                <th>Total Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in info %}
+            <tr>
+                <td>{{ transaction["symbol"] }}</td>
+                <td>{{ transaction["total_shares"] }}</td>
+                <td>{{ transaction["price"] }}</td>
+                <td>{{ transaction["total_value"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+<!-- {% if not info %}
+<h1>You currently do not own any stocks.<br><a href="/buy">Click here to buy stocks</a></h1>
+{% endif %} -->
+<div class="table-container">
+    <table>
+        <tbody>
+            <tr>
+                <td><b>Cash Available</b></td>
+                <td>{{ cash_avail }}</td>
+            </tr>
+            <tr>
+                <td><b>Grand total</b></td>
+                <td>{{ grand_total }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<form action="/" method="post">
+    <input type="number" name="money" min="0" max="1000000" placeholder="Enter amount">
+    <button class="btn btn-primary" type="submit" name="button" value="add-money">Add money</button>
+</form>
+{% endblock %}

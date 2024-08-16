@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+
+<!-- Render the transactions table -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Action</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+            <th scope="col">Liquid Cash</th>
+            <th scope="col">Date & Time (UTC)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for transaction in transactions %}
+        <tr>
+            <th scope="row">{{ transaction['action'] }}</th>
+            <td>{{ transaction['symbol'] }}</td>
+            <td>{{ transaction['shares'] }}</td>
+            <td>{{ transaction['price'] }}</td>
+            <td>{{ transaction['total_value'] }}</td>
+            <td>{{ transaction['cash_avail'] }}</td>
+            <td>{{ transaction['datetime'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
