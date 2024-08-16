@@ -34,8 +34,7 @@ This project is a web application that allows users to manage their finances, in
 1. Clone the repository: `git clone https://github.com/your-username/finance.git`
 2. Change into the repository directory: `cd finance`
 3. Install the required packages: `pip install -r requirements.txt`
-4. Additionally, install cs50 library: `pip install cs50`
-5. Run the application: `flask run`
+4. Run the application: `flask run`
 
 ## Usage
 
