@@ -1,7 +1,5 @@
 # CS50 Finance Project
 
-=====================================
-
 This project is a part of the Harvard University's CS50 curriculum, a introduction to computer science course.
 
 Link to GitHub Pages demo: <https://slmlaggi.github.io/cs50-finance>
