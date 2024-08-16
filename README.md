@@ -1,8 +1,8 @@
 # CS50 Finance Project
 
-This project is a part of the Harvard University's CS50 curriculum, a introduction to computer science course.
+This project is a part of the Harvard University's CS50 curriculum (Problem set 2 of Week 9), a introduction to computer science course.
 
-Link to GitHub Pages demo: <https://slmlaggi.github.io/cs50-finance>
+Link to Render demo: <https://cs50-finance-dk4u.onrender.com/login>
 
 ## Project Overview
 
@@ -46,4 +46,4 @@ This project is a web application that allows users to manage their finances, in
 
 This project is for educational purposes only and should not be used for actual financial transactions.
 
-Do NOT copy code directly from this project if you have not finished the pset yourself.
+Do NOT copy code directly from this project if you have not finished the Problem Set yourself.
